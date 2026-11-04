@@ -1,0 +1,304 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: #fff3f6;
+    color: #603d49;
+    min-height: 100vh;
+}
+
+/* Header */
+
+header {
+    text-align: center;
+    padding: 70px 20px 60px;
+    background: linear-gradient(135deg, #f8dce5, #fceaf0, #f5d4df);
+    border-bottom: 1px solid #eac2d0;
+}
+
+header::before {
+    content: "WORLD TIME • GLOBAL HOURS • WORLD TIME";
+    display: block;
+    color: #a76d82;
+    font-size: 10px;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 55px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    color: #a34f70;
+}
+
+header p {
+    margin-top: 15px;
+    color: #916779;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+/* Search Section */
+
+.search-section {
+    text-align: center;
+    margin: 55px 20px 10px;
+}
+
+.search-section h2 {
+    font-family: 'Playfair Display', serif;
+    color: #a34f70;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.search-section p {
+    color: #a47c8a;
+    font-size: 13px;
+    margin-top: 9px;
+}
+
+.search-box {
+    max-width: 550px;
+    height: 58px;
+    margin: 27px auto;
+    display: flex;
+    align-items: center;
+    background: #fffafd;
+    border: 1px solid #e7b7c9;
+    border-radius: 30px;
+    padding: 0 20px;
+    transition: 0.3s;
+}
+
+.search-box:focus-within {
+    border-color: #c77e9a;
+    box-shadow: 0 5px 20px #d58da52c;
+}
+
+.search-icon {
+    color: #c47795;
+    font-size: 27px;
+    margin-right: 12px;
+}
+
+.search-box input {
+    flex: 1;
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #603d49;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+}
+
+.search-box input::placeholder {
+    color: #b996a4;
+}
+
+.search-box button {
+    background: #f8e1e9;
+    border: none;
+    color: #a34f70;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 7px 10px;
+    border-radius: 50%;
+    display: none;
+}
+
+.search-box button:hover {
+    background: #edc4d3;
+}
+
+/* Clock Layout */
+
+.clock-container {
+    max-width: 1200px;
+    margin: 55px auto 65px;
+    padding: 0 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+/* Clock Cards */
+
+.clock-card {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(145deg, #fffafd, #fce8ef);
+    border: 1px solid #edc7d5;
+    border-radius: 15px;
+    padding: 32px 25px;
+    text-align: left;
+    min-height: 215px;
+    transition: 0.35s ease;
+    box-shadow: 0 5px 18px #c77e9510;
+}
+
+.clock-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: #d78ca7;
+}
+
+.clock-card::after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border: 1px solid #d78ca725;
+    border-radius: 50%;
+    right: -45px;
+    bottom: -55px;
+}
+
+.clock-card:hover {
+    transform: translateY(-7px);
+    border-color: #d78ca7;
+    background: linear-gradient(145deg, #fffafd, #f9dce7);
+    box-shadow: 0 12px 30px #c77e9528;
+}
+
+/* Country and City */
+
+.country {
+    font-size: 18px;
+    font-weight: 600;
+    color: #74495a;
+}
+
+.city {
+    color: #ad7c8e;
+    margin-top: 8px;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+/* Digital Clock */
+
+.time {
+    color: #bd6d8b;
+    font-size: 36px;
+    font-weight: 600;
+    margin: 25px 0 12px;
+    letter-spacing: 1px;
+    font-variant-numeric: tabular-nums;
+    position: relative;
+    z-index: 1;
+}
+
+.date {
+    color: #987180;
+    font-size: 13px;
+    margin-bottom: 17px;
+}
+
+/* Time Zone */
+
+.timezone {
+    display: inline-block;
+    background: #f6dce6;
+    color: #a34f70;
+    padding: 7px 12px;
+    border: 1px solid #ebc1d0;
+    border-radius: 20px;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+/* No Results */
+
+.no-results {
+    display: none;
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px 15px;
+    color: #b76d8a;
+    font-size: 17px;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 28px 15px;
+    color: #a47c8a;
+    background: #f8e1e9;
+    border-top: 1px solid #edc7d5;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 900px) {
+    .clock-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    header h1 {
+        font-size: 44px;
+    }
+}
+
+@media (max-width: 550px) {
+    header {
+        padding: 55px 15px;
+    }
+
+    header h1 {
+        font-size: 34px;
+        letter-spacing: 3px;
+    }
+
+    header p {
+        font-size: 13px;
+    }
+
+    header::before {
+        letter-spacing: 2px;
+    }
+
+    .search-section {
+        margin-top: 40px;
+    }
+
+    .search-section h2 {
+        font-size: 25px;
+    }
+
+    .search-box {
+        height: 52px;
+    }
+
+    .clock-container {
+        grid-template-columns: 1fr;
+        padding: 0 18px;
+        margin: 35px auto;
+        gap: 17px;
+    }
+
+    .clock-card {
+        padding: 28px 22px;
+    }
+
+    .time {
+        font-size: 34px;
+    }
+}

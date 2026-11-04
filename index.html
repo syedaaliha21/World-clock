@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>WORLD CLOCK</h1>
+        <p>Discover the current time around the world</p>
+    </header>
+
+<div class="search-section">
+    <h2>Explore World Time</h2>
+    <p>Find the current time in your favourite city</p>
+
+    <div class="search-box">
+        <span class="search-icon">⌕</span>
+        <input
+            type="text"
+            id="countrySearch"
+            placeholder="Search country or city..."
+            autocomplete="off"
+        >
+        <button id="clearSearch" type="button">✕</button>
+    </div>
+</div>
+
+    <main>
+        <div class="clock-container">
+
+            <div class="clock-card">
+                <div class="country">🇵🇰 Pakistan</div>
+                <div class="city">Karachi</div>
+                <div class="time" id="pakistan">00:00:00</div>
+                <div class="date" id="date-pakistan"></div>
+                <div class="timezone">PKT | UTC +05:00</div>
+            </div>
+
+            <div class="clock-card">
+                <div class="country">🇺🇸 United States</div>
+                <div class="city">New York</div>
+                <div class="time" id="usa">00:00:00</div>
+                <div class="date" id="date-usa"></div>
+                <div class="timezone">Eastern Time</div>
+            </div>
+
+            <div class="clock-card">
+                <div class="country">🇬🇧 United Kingdom</div>
+                <div class="city">London</div>
+                <div class="time" id="uk">00:00:00</div>
+                <div class="date" id="date-uk"></div>
+                <div class="timezone">GMT / BST</div>
+            </div>
+
+            <div class="clock-card">
+                <div class="country">🇦🇪 United Arab Emirates</div>
+                <div class="city">Dubai</div>
+                <div class="time" id="uae">00:00:00</div>
+                <div class="date" id="date-uae"></div>
+                <div class="timezone">GST | UTC +04:00</div>
+            </div>
+
+            <div class="clock-card">
+                <div class="country">🇯🇵 Japan</div>
+                <div class="city">Tokyo</div>
+                <div class="time" id="japan">00:00:00</div>
+                <div class="date" id="date-japan"></div>
+                <div class="timezone">JST | UTC +09:00</div>
+            </div>
+
+            <div class="clock-card">
+                <div class="country">🇮🇳 India</div>
+                <div class="city">New Delhi</div>
+                <div class="time" id="india">00:00:00</div>
+                <div class="date" id="date-india"></div>
+                <div class="timezone">IST | UTC +05:30</div>
+            </div>
+
+            <div class="clock-card">
+                <div class="country">🇸🇦 Saudi Arabia</div>
+                <div class="city">Riyadh</div>
+                <div class="time" id="saudi">00:00:00</div>
+                <div class="date" id="date-saudi"></div>
+                <div class="timezone">AST | UTC +03:00</div>
+            </div>
+
+            <div class="clock-card">
+                <div class="country">🇦🇺 Australia</div>
+                <div class="city">Sydney</div>
+                <div class="time" id="australia">00:00:00</div>
+                <div class="date" id="date-australia"></div>
+                <div class="timezone">AEST / AEDT</div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>WORLD CLOCK | Time Around The World</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
